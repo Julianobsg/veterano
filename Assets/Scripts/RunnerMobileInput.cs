@@ -36,6 +36,7 @@ public class RunnerMobileInput : MonoBehaviour
 
     private void TouchEnded(object sender, TouchEventArgs e)
     {
+        //Debug.Log(Vector3.Distance(touchStartPosition, e.Touches[0].Position));
         if (Vector3.Distance(touchStartPosition, e.Touches[0].Position) > minimumThreshold)
         {
             direction *= -1;

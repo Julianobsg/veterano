@@ -1,1 +1,12 @@
 D:\Projects\Veterano\obj\Debug\UnityVS.Veterano.CSharp.csprojResolveAssemblyReference.cache
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\TouchScript.dll
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\Projects\veterano\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+D:\Projects\veterano\obj\Debug\Assembly-CSharp.dll
+D:\Projects\veterano\obj\Debug\Assembly-CSharp.pdb
