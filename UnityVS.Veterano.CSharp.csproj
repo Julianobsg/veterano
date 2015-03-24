@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9BA127A3-B749-A739-482B-92F7671E3A6A}</ProjectGuid>
+    <ProjectGuid>{AF4F6199-AD70-2546-AA7D-F3B485609F7E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace></RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,22 +59,13 @@
   <ItemGroup>
     <Compile Include="Assets\SampleAssets\2D\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
+    <Compile Include="Assets\Scripts\Character2DFlip.cs" />
+    <Compile Include="Assets\Scripts\EnterLevel.cs" />
+    <Compile Include="Assets\Scripts\MoveToCharacter2D.cs" />
+    <Compile Include="Assets\Scripts\MoveToMobileInput.cs" />
     <Compile Include="Assets\Scripts\Restarter.cs" />
     <Compile Include="Assets\Scripts\RunnerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\RunnerMobileInput.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\2D - Double Tap\Scripts\DoubleTap_Sprite.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Button.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Panel.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Input\Scripts\InputExample.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Input\Scripts\InputExample_Ball.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Layers\Scripts\Layers_Sprite.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\LongPress\Scripts\LongPress_Button.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Pan\Scripts\Pan_Button.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Pan\Scripts\Pan_Object.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Breaker.cs" />
-    <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Spawner.cs" />
-    <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Example.cs" />
-    <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

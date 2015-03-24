@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Character2DFlip))]
 public class RunnerCharacter2D : MonoBehaviour
 {
-    private bool facingRight = true; // For determining which way the player is currently facing.
-
     [SerializeField] private float maxSpeed = 10f; // The fastest the player can travel in the x axis.
     [SerializeField] private float jumpForce = 400f; // Amount of force added when the player jumps.	
 
@@ -16,14 +15,16 @@ public class RunnerCharacter2D : MonoBehaviour
     private Transform ceilingCheck; // A position marking where to check for ceilings
     private float ceilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
     private Animator anim; // Reference to the player's animator component.
-
-
+    private Rigidbody2D myRigidbody2D;
+    private Character2DFlip characterFlip;
     private void Awake()
     {
         // Setting up references.
         groundCheck = transform.Find("GroundCheck");
         ceilingCheck = transform.Find("CeilingCheck");
         anim = GetComponent<Animator>();
+        myRigidbody2D = rigidbody2D;
+        characterFlip = GetComponent<Character2DFlip>();
     }
 
 
@@ -34,7 +35,7 @@ public class RunnerCharacter2D : MonoBehaviour
         anim.SetBool("Ground", grounded);
 
         // Set the vertical animation
-        anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+        anim.SetFloat("vSpeed", myRigidbody2D.velocity.y);
     }
 
 
@@ -50,16 +51,9 @@ public class RunnerCharacter2D : MonoBehaviour
             anim.SetFloat("Speed", Mathf.Abs(move));
 
             // Move the character
-            rigidbody2D.velocity = new Vector2(move*maxSpeed, rigidbody2D.velocity.y);
+            myRigidbody2D.velocity = new Vector2(move * maxSpeed, myRigidbody2D.velocity.y);
 
-            // If the input is moving the player right and the player is facing left...
-            if (move > 0 && !facingRight)
-                // ... flip the player.
-                Flip();
-                // Otherwise if the input is moving the player left and the player is facing right...
-            else if (move < 0 && facingRight)
-                // ... flip the player.
-                Flip();
+            characterFlip.CheckFlip(move);
         }
         // If the player should jump...
         if (grounded && jump && anim.GetBool("Ground"))
@@ -67,19 +61,9 @@ public class RunnerCharacter2D : MonoBehaviour
             // Add a vertical force to the player.
             grounded = false;
             anim.SetBool("Ground", false);
-            rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            myRigidbody2D.AddForce(new Vector2(0f, jumpForce));
         }
     }
 
 
-    private void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        facingRight = !facingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
 }
