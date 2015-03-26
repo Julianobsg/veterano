@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.veterano.CSharp.Editor", "UnityVS.veterano.CSharp.Editor.csproj", "{210E8EBF-E84C-6BF4-8CEE-4C2D800189EA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.veterano.CSharp", "UnityVS.veterano.CSharp.csproj", "{AF4F6199-AD70-2546-AA7D-F3B485609F7E}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{210E8EBF-E84C-6BF4-8CEE-4C2D800189EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210E8EBF-E84C-6BF4-8CEE-4C2D800189EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210E8EBF-E84C-6BF4-8CEE-4C2D800189EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210E8EBF-E84C-6BF4-8CEE-4C2D800189EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF4F6199-AD70-2546-AA7D-F3B485609F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF4F6199-AD70-2546-AA7D-F3B485609F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF4F6199-AD70-2546-AA7D-F3B485609F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -37,7 +37,7 @@ public class MoveToCharacter2D : MonoBehaviour
             anim.SetFloat("Speed", Mathf.Abs(move));
 
             // Move the character
-            rigidbody2D.velocity = new Vector2(move * maxSpeed, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, 0);
             if (Vector2.Distance(myTransform.position, target) <= 0.3 || move == 0 || lastPosition == myTransform.position)
             {
                 moving = false;
@@ -46,7 +46,7 @@ public class MoveToCharacter2D : MonoBehaviour
         }
         else
         {
-            rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
             anim.SetFloat("Speed", 0);
         }
 	}

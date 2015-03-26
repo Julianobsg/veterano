@@ -23,7 +23,7 @@ public class RunnerCharacter2D : MonoBehaviour
         groundCheck = transform.Find("GroundCheck");
         ceilingCheck = transform.Find("CeilingCheck");
         anim = GetComponent<Animator>();
-        myRigidbody2D = rigidbody2D;
+        myRigidbody2D = GetComponent<Rigidbody2D>();
         characterFlip = GetComponent<Character2DFlip>();
     }
 
