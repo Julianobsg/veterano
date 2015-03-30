@@ -65,5 +65,10 @@ public class RunnerCharacter2D : MonoBehaviour
         }
     }
 
-
+    public float MaxSpeed
+    {
+        get { return maxSpeed; }
+        set { maxSpeed = value; }
+    }
+    
 }

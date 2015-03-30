@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class TriggerKiller : Manager
+public class TriggerKill : Manager
 {
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ColiderChanceScene.cs" />
     <Compile Include="Assets\SampleAssets\2D\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\Scripts\Character2DFlip.cs" />
@@ -66,8 +67,10 @@
     <Compile Include="Assets\Scripts\MoveToCharacter2D.cs" />
     <Compile Include="Assets\Scripts\MoveToMobileInput.cs" />
     <Compile Include="Assets\Scripts\OnTriggerChangeScene.cs" />
+    <Compile Include="Assets\Scripts\OnTriggerDestroy.cs" />
     <Compile Include="Assets\Scripts\RunnerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\RunnerMobileInput.cs" />
+    <Compile Include="Assets\Scripts\SpeedModifier.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TimerModifier.cs" />
     <Compile Include="Assets\Scripts\TriggerKill.cs" />
