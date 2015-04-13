@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="TouchScript">
       <HintPath>Assets\TouchScript\Plugins\TouchScript.dll</HintPath>
     </Reference>
@@ -62,6 +65,7 @@
     <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\Scripts\Character2DFlip.cs" />
     <Compile Include="Assets\Scripts\EnterLevel.cs" />
+    <Compile Include="Assets\Scripts\Fadding.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager.cs" />
     <Compile Include="Assets\Scripts\MoveToCharacter2D.cs" />

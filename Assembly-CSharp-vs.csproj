@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{AAAA661F-8BB9-C133-53DB-03AC1165F1B0}</ProjectGuid>
+	<ProjectGuid>{72E47088-1FFE-DC0B-2285-6D877C997901}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -51,13 +51,16 @@
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Scripts\Character2DFlip.cs" />
      <Compile Include="Assets\Scripts\EnterLevel.cs" />
+     <Compile Include="Assets\Scripts\Fadding.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\MoveToCharacter2D.cs" />
      <Compile Include="Assets\Scripts\MoveToMobileInput.cs" />
      <Compile Include="Assets\Scripts\OnTriggerChangeScene.cs" />
+     <Compile Include="Assets\Scripts\OnTriggerDestroy.cs" />
      <Compile Include="Assets\Scripts\RunnerCharacter2D.cs" />
      <Compile Include="Assets\Scripts\RunnerMobileInput.cs" />
+     <Compile Include="Assets\Scripts\SpeedModifier.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\TimerModifier.cs" />
      <Compile Include="Assets\Scripts\TriggerKill.cs" />
@@ -68,7 +71,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript">
- <HintPath>C:/RAQUEL/DESENV/Unit-VETERANO/veteranu/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/RAQUEL/DESENV/Unit-VETERANO/GitVeterano/veterano/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

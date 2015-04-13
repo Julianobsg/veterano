@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9CC0D505-7003-5F49-FD42-C857BC8D0FB2}</ProjectGuid>
+	<ProjectGuid>{C3EAD974-D7AA-188D-D95A-2D7E7AB6B919}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -78,7 +78,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript">
- <HintPath>C:/RAQUEL/DESENV/Unit-VETERANO/veteranu/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/RAQUEL/DESENV/Unit-VETERANO/GitVeterano/veterano/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -113,7 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{AAAA661F-8BB9-C133-53DB-03AC1165F1B0}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{72E47088-1FFE-DC0B-2285-6D877C997901}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
