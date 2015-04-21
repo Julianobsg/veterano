@@ -7,17 +7,21 @@ public class Timer : Manager {
 
     void Start () 
     {
+        if (gm.timer == null)
+        {
+            gm.timer = this;
+        }
         StartCoroutine(Countdown());
         text = GetComponent<Text>();
-        text.text = gm.ActualTime;
+        Text = gm.ActualTime;
 	}
 
     IEnumerator Countdown () 
     {
         yield return new WaitForSeconds(1);
-        gm.timeInSeconds--;
-        text.text = gm.ActualTime;
-        if (gm.timeInSeconds > 0)
+        gm.TimeInSeconds--;
+        Text = gm.ActualTime;
+        if (gm.TimeInSeconds > 0)
         {
             StartCoroutine(Countdown());
         }
@@ -26,4 +30,6 @@ public class Timer : Manager {
             gm.Die();
         }
     }
+
+    public string Text { set { text.text = value;} }
 }

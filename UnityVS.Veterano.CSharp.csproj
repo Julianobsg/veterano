@@ -72,11 +72,12 @@
     <Compile Include="Assets\Scripts\RunnerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\RunnerMobileInput.cs" />
     <Compile Include="Assets\Scripts\SpeedModifier.cs" />
-    <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\StressModifier.cs" />
     <Compile Include="Assets\Scripts\TimerModifier.cs" />
     <Compile Include="Assets\Scripts\TriggerKill.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBarControl.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBarExample.cs" />
+    <Compile Include="Assets\Scripts\UI\Timer.cs" />
     <Compile Include="Assets\Scripts\UI\UIMenuScripts.cs" />
     <Compile Include="Assets\ThirdParty\Spriter2Unity\Example\Scripts\AnimationTestScript.cs" />
     <Compile Include="Assets\ThirdParty\Spriter2Unity\Runtime\SortingOrderUpdate.cs" />
