@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\OnTriggerChangeScene.cs" />
      <Compile Include="Assets\Scripts\OnTriggerDestroy.cs" />
      <Compile Include="Assets\Scripts\RunnerCharacter2D.cs" />
+     <Compile Include="Assets\Scripts\RunnerKeyboardInput.cs" />
      <Compile Include="Assets\Scripts\RunnerMobileInput.cs" />
      <Compile Include="Assets\Scripts\SpeedModifier.cs" />
      <Compile Include="Assets\Scripts\StressModifier.cs" />

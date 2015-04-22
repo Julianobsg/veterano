@@ -17,6 +17,8 @@ public class RunnerCharacter2D : MonoBehaviour
     private Animator anim; // Reference to the player's animator component.
     private Rigidbody2D myRigidbody2D;
     private Character2DFlip characterFlip;
+    public float direction;
+
     private void Awake()
     {
         // Setting up references.
@@ -25,19 +27,18 @@ public class RunnerCharacter2D : MonoBehaviour
         anim = GetComponent<Animator>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
         characterFlip = GetComponent<Character2DFlip>();
+        direction = 1.0f;
     }
 
 
     private void FixedUpdate()
     {
-        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
         anim.SetBool("Ground", grounded);
 
-        // Set the vertical animation
         anim.SetFloat("vSpeed", myRigidbody2D.velocity.y);
+        Move(direction, false);
     }
-
 
     public void Move(float move, bool jump)
     {

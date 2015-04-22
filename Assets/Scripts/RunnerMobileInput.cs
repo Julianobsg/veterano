@@ -3,7 +3,6 @@ using System.Collections;
 using TouchScript;
 public class RunnerMobileInput : MonoBehaviour 
 {
-    public float direction = 1;
     public float minimumThreshold = 1;
     RunnerCharacter2D rc;
 
@@ -39,11 +38,11 @@ public class RunnerMobileInput : MonoBehaviour
         //Debug.Log(Vector3.Distance(touchStartPosition, e.Touches[0].Position));
         if (Vector3.Distance(touchStartPosition, e.Touches[0].Position) > minimumThreshold)
         {
-            direction *= -1;
+            rc.direction *= -1;
         }
         else
         {
-            rc.Move(direction, true);
+            rc.Move(rc.direction, true);
         }
 
     }
@@ -53,8 +52,4 @@ public class RunnerMobileInput : MonoBehaviour
         rc = GetComponent<RunnerCharacter2D>();
     }
 
-    void FixedUpdate()
-    {
-        rc.Move(direction, false);
-    }
 }
