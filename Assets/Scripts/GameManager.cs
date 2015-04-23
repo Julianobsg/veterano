@@ -4,8 +4,24 @@ using System.Collections;
 public class GameManager : MonoBehaviour 
 {
     public const string GAME_MANAGER = "GameController";
+    public Timer timer;
+    public HealthBarControl stressBar;
 
-    public int timeInSeconds = 60;
+    [SerializeField]
+    private float stress = 0;
+
+    [SerializeField]
+    private int timeInSeconds = 60;
+
+    public int TimeInSeconds
+    {
+        get { return timeInSeconds; }
+        set
+        {
+            timeInSeconds = value;
+            timer.Text = ActualTime; 
+        }
+    }
     public string ActualTime 
     { 
         get 
@@ -16,6 +32,18 @@ public class GameManager : MonoBehaviour
             return time; 
         }
     }
+
+
+    public float Stress
+    {
+        get { return stress; }
+        set 
+        {
+            stress = value; 
+            stressBar.SetBarPercent(stress);
+        }
+    }
+
 
     public void Die()
     {

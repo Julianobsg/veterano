@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TimerModifier : Manager 
+public class StressModifier : Manager 
 {
-    public int timeAdded;
+    public int stressAdded;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        gm.TimeInSeconds += timeAdded;
+        gm.Stress += stressAdded;
     }
 }
