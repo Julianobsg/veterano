@@ -6,12 +6,25 @@ public class GameManager : MonoBehaviour
     public const string GAME_MANAGER = "GameController";
     public Timer timer;
     public HealthBarControl stressBar;
+    public CRUi crUi;
 
     [SerializeField]
     private float stress = 0;
 
     [SerializeField]
     private int timeInSeconds = 60;
+
+    [SerializeField]
+    private float actualCR = 2.0f;
+
+    void Start ()
+    {
+        if (crUi == null)
+        {
+            crUi = GameObject.FindGameObjectWithTag("CR").GetComponent<CRUi>();
+        }
+        crUi.CR = actualCR;
+    }
 
     public int TimeInSeconds
     {
@@ -44,9 +57,41 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LevelCompleted ()
+    {
+        if (actualCR < 1)
+        {
+
+        }
+        else
+        {
+
+        }
+    }
 
     public void Die()
     {
         Application.LoadLevel(Application.loadedLevelName);
+    }
+
+    public float CR 
+    {
+        get 
+        {
+            return actualCR;
+        }
+        set 
+        {
+            actualCR = value;
+            if (actualCR > 4)
+            {
+                actualCR = 4;
+            }
+            if (actualCR < 0)
+            {
+                actualCR = 0;
+            }
+            crUi.CR = actualCR;
+        } 
     }
 }

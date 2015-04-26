@@ -4,6 +4,7 @@ using System.Collections;
 public class SpeedModifier : MonoBehaviour 
 {
     private RunnerCharacter2D character;
+    [SerializeField]
     private float ammount;
     public void OnTriggerEnter2D(Collider2D other)
     {

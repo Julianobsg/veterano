@@ -25,12 +25,14 @@ public class Character2DFlip : MonoBehaviour {
 
     private void Flip()
     {
-        // Switch the way the player is labelled as facing.
         facingRight = !facingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = myTransform.localScale;
-        theScale.x *= -1;
-        myTransform.localScale = theScale;
+        if (facingRight)
+        {
+            transform.localEulerAngles = new Vector3(0, 90, 0);
+        }
+        else
+        {
+            transform.localEulerAngles = new Vector3(0, 270, 0);
+        }
     }
 }

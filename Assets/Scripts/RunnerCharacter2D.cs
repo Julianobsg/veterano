@@ -30,6 +30,7 @@ public class RunnerCharacter2D : MonoBehaviour
         myRigidbody2D = GetComponent<Rigidbody2D>();
         characterFlip = GetComponent<Character2DFlip>();
         direction = 1.0f;
+        IsRunning = true;
     }
 
 
@@ -40,32 +41,40 @@ public class RunnerCharacter2D : MonoBehaviour
         anim.SetBool("Ground", grounded);
 
         anim.SetFloat("vSpeed", myRigidbody2D.velocity.y);
+
         Move(direction, false);
+        
     }
 
     public void Move(float move, bool jump)
     {
 
-
-        //only control the player if grounded or airControl is turned on
-        if (grounded || airControl)
+        if (IsRunning)
         {
+            //only control the player if grounded or airControl is turned on
+            if (grounded || airControl)
+            {
 
-            // The Speed animator parameter is set to the absolute value of the horizontal input.
-            anim.SetFloat("Speed", Mathf.Abs(move));
+                // The Speed animator parameter is set to the absolute value of the horizontal input.
+                anim.SetFloat("Speed", Mathf.Abs(move));
+                // Move the character
+                myRigidbody2D.velocity = new Vector2(move * maxSpeed, myRigidbody2D.velocity.y);
 
-            // Move the character
-            myRigidbody2D.velocity = new Vector2(move * maxSpeed, myRigidbody2D.velocity.y);
-
-            characterFlip.CheckFlip(move);
+                characterFlip.CheckFlip(move);
+            }
+            // If the player should jump...
+            if (grounded && jump && anim.GetBool("Ground"))
+            {
+                // Add a vertical force to the player.
+                grounded = false;
+                anim.SetBool("Ground", false);
+                myRigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            }
         }
-        // If the player should jump...
-        if (grounded && jump && anim.GetBool("Ground"))
+        else
         {
-            // Add a vertical force to the player.
-            grounded = false;
-            anim.SetBool("Ground", false);
-            myRigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            anim.SetFloat("Speed", 0);
+            myRigidbody2D.velocity = new Vector2(0, myRigidbody2D.velocity.y);
         }
     }
 
@@ -80,4 +89,6 @@ public class RunnerCharacter2D : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(groundCheck.position, groundedRadius);
     }
+
+    public bool IsRunning { get; set; }
 }
