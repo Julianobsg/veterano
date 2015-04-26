@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\UI\HealthBarExample.cs" />
      <Compile Include="Assets\Scripts\UI\InnerThoughtTexts.cs" />
      <Compile Include="Assets\Scripts\UI\LoadScene.cs" />
+     <Compile Include="Assets\Scripts\UI\OpenDialogue.cs" />
      <Compile Include="Assets\Scripts\UI\SetPanelActiveStatus.cs" />
      <Compile Include="Assets\Scripts\UI\Timer.cs" />
      <Compile Include="Assets\Scripts\UI\UIMenuScripts.cs" />

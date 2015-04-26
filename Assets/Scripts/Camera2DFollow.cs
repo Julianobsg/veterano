@@ -19,6 +19,10 @@ namespace UnitySampleAssets._2D
 
 		private Transform myTransform;
 
+        [SerializeField]
+        private float minHeight = 0.0f;
+        [SerializeField]
+        private float maxHeight = 2.0f;
         // Use this for initialization
         private void Start()
         {
@@ -49,7 +53,16 @@ namespace UnitySampleAssets._2D
             Vector3 aheadTargetPos = target.position + lookAheadPos + Vector3.forward*offsetZ;
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
 
-			newPos = new Vector3(newPos.x, myTransform.position.y, newPos.z);
+            float height = newPos.y;
+            if (height > maxHeight)
+            {
+                height = maxHeight;
+            }
+            else if (height < minHeight)
+            {
+                height = minHeight;
+            }
+            newPos = new Vector3(newPos.x, height, newPos.z);
             myTransform.position = newPos;
 
             lastTargetPosition = target.position;
