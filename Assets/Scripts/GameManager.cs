@@ -3,6 +3,9 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour 
 {
+    private const string TIME_DEATH = "Você acordou atrasado, perdeu a prova e reprovou!";
+    private const string DEATH = "Você acordou atrasado, perdeu a prova e reprovou!";
+    private const string LOW_CR_DEATH = "Sua nota está baixa, você reprovou.";
     public const string GAME_MANAGER = "GameController";
     public Timer timer;
     public HealthBarControl stressBar;
@@ -16,6 +19,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private float actualCR = 2.0f;
+
+    [SerializeField]
+    private DeathFeedBack deathPanel;
+
+    [SerializeField]
+    private GameObject winPanel;
 
     void Start ()
     {
@@ -61,17 +70,37 @@ public class GameManager : MonoBehaviour
     {
         if (actualCR < 1)
         {
-
+            DeathFeedback(LOW_CR_DEATH);
         }
         else
         {
-
+            WinFeedback();
         }
+    }
+
+    private void WinFeedback()
+    {
+        Pause = true;
+        winPanel.SetActive(true);
     }
 
     public void Die()
     {
-        Application.LoadLevel(Application.loadedLevelName);
+        if (timeInSeconds <= 0)
+        {
+            DeathFeedback(TIME_DEATH);
+        }
+        else
+        {
+            DeathFeedback(DEATH);
+        }
+    }
+
+    private void DeathFeedback(string feedback)
+    {
+        Pause = true;
+        deathPanel.gameObject.SetActive(true);
+        deathPanel.feedback = feedback;
     }
 
     public float CR 
@@ -93,5 +122,13 @@ public class GameManager : MonoBehaviour
             }
             crUi.CR = actualCR;
         } 
+    }
+
+    public bool Pause
+    {
+        set 
+        {
+            timer.Pause = value;
+        }
     }
 }

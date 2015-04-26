@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SetPlayerRunning : MonoBehaviour 
+public class SetPlayerRunning : Manager 
 {
     [SerializeField]
     private bool setRunning = false;
@@ -11,6 +11,7 @@ public class SetPlayerRunning : MonoBehaviour
         RunnerCharacter2D rc2D = other.GetComponent<RunnerCharacter2D>();
         if (rc2D != null)
         {
+            gm.Pause = !setRunning;
             rc2D.IsRunning = setRunning;
         }
     }

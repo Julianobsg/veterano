@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\TimerModifier.cs" />
     <Compile Include="Assets\Scripts\TriggerKill.cs" />
     <Compile Include="Assets\Scripts\UI\CRUi.cs" />
+    <Compile Include="Assets\Scripts\UI\DeathFeedBack.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBarControl.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBarExample.cs" />
     <Compile Include="Assets\Scripts\UI\InnerThoughtTexts.cs" />

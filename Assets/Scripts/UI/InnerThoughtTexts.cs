@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class InnerThoughtTexts : MonoBehaviour
+public class InnerThoughtTexts : Manager
 {
     public List<string> texts;
     private Text uiText;
@@ -29,6 +29,7 @@ public class InnerThoughtTexts : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").
                     GetComponent<RunnerCharacter2D>().IsRunning = true;
                 gameObject.transform.parent.gameObject.SetActive(false);
+                gm.Pause = false;
             }
         }
 	}

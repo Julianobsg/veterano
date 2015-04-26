@@ -7,4 +7,9 @@ public class LoadScene : MonoBehaviour
     {
         Application.LoadLevel(thisSceneName);
     }
+
+    public void Reload()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }

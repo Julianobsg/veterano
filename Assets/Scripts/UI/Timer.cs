@@ -11,14 +11,15 @@ public class Timer : Manager {
         {
             gm.timer = this;
         }
-        StartCoroutine(Countdown());
         text = GetComponent<Text>();
         Text = gm.ActualTime;
+        Pause = false;
 	}
 
     IEnumerator Countdown () 
     {
         yield return new WaitForSeconds(1);
+
         gm.TimeInSeconds--;
         Text = gm.ActualTime;
         if (gm.TimeInSeconds > 0)
@@ -32,4 +33,22 @@ public class Timer : Manager {
     }
 
     public string Text { set { text.text = value;} }
+    private bool pause;
+
+    public bool Pause
+    {
+        get { return pause; }
+        set 
+        { 
+            pause = value;
+            if (pause)
+            {
+                StopAllCoroutines();
+            }
+            else
+            {
+                StartCoroutine(Countdown());
+            }
+        }
+    }
 }
