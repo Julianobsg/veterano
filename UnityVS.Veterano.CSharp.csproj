@@ -80,9 +80,10 @@
     <Compile Include="Assets\Scripts\UI\HealthBarExample.cs" />
     <Compile Include="Assets\Scripts\UI\Timer.cs" />
     <Compile Include="Assets\Scripts\UI\UIMenuScripts.cs" />
-    <Compile Include="Assets\ThirdParty\Spriter2Unity\Example\Scripts\AnimationTestScript.cs" />
-    <Compile Include="Assets\ThirdParty\Spriter2Unity\Runtime\SortingOrderUpdate.cs" />
-    <Compile Include="Assets\ThirdParty\Spriter2Unity\Runtime\SpriterEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_cutoff.shader" />
+    <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_hair.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

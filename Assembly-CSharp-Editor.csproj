@@ -74,6 +74,8 @@
      <Compile Include="Assets\ThirdParty\Spriter2Unity\Editor\Utils\PrefabUtils.cs" />
      <Compile Include="Assets\ThirdParty\Spriter2Unity\Editor\Utils\XmlUtils.cs" />
      <Compile Include="Assets\ThirdParty\Spriter2Unity\Example\Editor\AnimationTestScriptInspector.cs" />
+     <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_cutoff.shader" />
+     <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_hair.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

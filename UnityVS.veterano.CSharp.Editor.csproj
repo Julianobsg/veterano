@@ -134,5 +134,9 @@
     <Compile Include="Assets\ThirdParty\Spriter2Unity\Editor\Utils\XmlUtils.cs" />
     <Compile Include="Assets\ThirdParty\Spriter2Unity\Example\Editor\AnimationTestScriptInspector.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_cutoff.shader" />
+    <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_hair.shader" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
