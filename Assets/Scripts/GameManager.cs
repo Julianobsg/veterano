@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour 
 {
+    public int levelID = 0;
     private const string TIME_DEATH = "Você acordou atrasado, perdeu a prova e reprovou!";
     private const string DEATH = "Você acordou atrasado, perdeu a prova e reprovou!";
     private const string LOW_CR_DEATH = "Sua nota está baixa, você reprovou.";
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
 
     private void WinFeedback()
     {
+        PlayerPrefs.SetInt("level" + levelID.ToString(), 1);
         Pause = true;
         winPanel.SetActive(true);
     }
