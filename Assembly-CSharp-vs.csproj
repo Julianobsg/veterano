@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\OnTriggerChangeScene.cs" />
      <Compile Include="Assets\Scripts\OnTriggerDestroy.cs" />
      <Compile Include="Assets\Scripts\RunnerCharacter2D.cs" />
+     <Compile Include="Assets\Scripts\RunnerCharacter2DAudio.cs" />
      <Compile Include="Assets\Scripts\RunnerKeyboardInput.cs" />
      <Compile Include="Assets\Scripts\RunnerMobileInput.cs" />
      <Compile Include="Assets\Scripts\SetPlayerRunning.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Scripts\UI\UIMenuScripts.cs" />
      <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_cutoff.shader" />
      <None Include="Assets\Obj\TaichiCharacterPack\Shaders\toon_hair.shader" />
+     <None Include="Assets\Audio\FootstepsSoundsCarpetPack\FootstepsSoundsCarpetPackInfo.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -91,4 +91,5 @@ public class RunnerCharacter2D : MonoBehaviour
     }
 
     public bool IsRunning { get; set; }
+    public bool IsGrounded { get { return grounded; } }
 }
